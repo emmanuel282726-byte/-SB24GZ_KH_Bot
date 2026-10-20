@@ -1,7 +1,0 @@
-def safe_translate(text: str, src: str, dest: str, retries: int = 2) -> str:
-    for attempt in range(retries + 1):
-        try:
-            logger.info(f"Translating: '{text[:30]}...' {src} -> {dest}") # Add this line
-            result = GoogleTranslator(source=src, target=dest).translate(text)
-            logger.info(f"Result: '{result[:30]}...'") # Add this line
-            # ... rest of the code
